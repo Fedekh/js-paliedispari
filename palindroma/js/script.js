@@ -28,6 +28,7 @@ function palindroma (wordToCheck) {
   return userReverseWord === wordToCheck.toLowerCase();
 }
 
+
 let output = document.createElement("h3");
 output.classList.add("margin");
 const wrapper = document.querySelector(".wrapper");
