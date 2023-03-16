@@ -55,11 +55,34 @@ function randomic () {
 function disparity (numToCheck) {
     let result ;
     if (numToCheck % 2 === 0 ) {
-        result = "la somma dei 2 numeri è pari ed è uguale a:" + numToCheck;
+        result = "la somma dei 2 numeri è pari, ed è uguale a : " + numToCheck;
     }else {
-        result = "la somma dei 2 numeri è dispari ed è uguale a:" + numToCheck;
+        result = "la somma dei 2 numeri è dispari, ed è uguale a : " + numToCheck;
     }
     return result;
   }
+
+
+//   MANIPOLAZIONE DOM PER ABBELLIMENTO
+const wrapper = document.querySelector (".wrapper");
+
+let userInput = document.createElement ("h2");
+let pcInput = document.createElement ("h2");
+let outSum = document.createElement ("h2");
+let outParity = document.createElement ("h2"); 
+
+userInput.innerText = "Hai scelto : " + userNumber;
+wrapper.append(userInput);
+
+pcInput.innerText = "Al pc è stato appioppato : " + rdmNumb;
+wrapper.append(pcInput);
+
+outSum.innerText = "La somma di questi 2 numeri è : " + sum;
+wrapper.append(outSum);
+
+outParity.innerText = "Quindi " + totalResult;
+wrapper.append(outParity);
+
+
 
  
