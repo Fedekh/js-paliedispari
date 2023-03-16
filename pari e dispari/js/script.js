@@ -6,8 +6,7 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-
-
+const wrapper = document.querySelector (".wrapper");
 
 
 let userNumber;
@@ -29,7 +28,7 @@ console.log("il numero casuale appioppato al pc è:", rdmNumb);
 
 // somma dei 2 numeri
 let sum = userNumber + rdmNumb;
-console.log("la somma tra i 2 numeri è:", sum);
+console.log("La somma dei due numeri, quindi, è ", sum);
 
 //richiamo funzione per vedere se la somma è pari o meno
 let totalResult = disparity (sum);
@@ -55,21 +54,25 @@ function randomic () {
 function disparity (numToCheck) {
     let result ;
     if (numToCheck % 2 === 0 ) {
-        result = "la somma dei 2 numeri è pari, ed è uguale a : " + numToCheck;
+      result = "la somma dei due numeri è pari : " + numToCheck;               
     }else {
-        result = "la somma dei 2 numeri è dispari, ed è uguale a : " + numToCheck;
+      result = "la somma dei due numeri è dispari : " + numToCheck;       
     }
-    return result;
-  }
+      return result;
+    }
+          
 
 
 //   MANIPOLAZIONE DOM PER ABBELLIMENTO
-const wrapper = document.querySelector (".wrapper");
 
 let userInput = document.createElement ("h2");
+userInput.classList.add("user-input");
 let pcInput = document.createElement ("h2");
+pcInput.classList.add("pc-input");
 let outSum = document.createElement ("h2");
+outSum.classList.add("out-sum");
 let outParity = document.createElement ("h2"); 
+outParity.classList.add("parity");
 
 userInput.innerText = "Hai scelto : " + userNumber;
 wrapper.append(userInput);
@@ -77,11 +80,13 @@ wrapper.append(userInput);
 pcInput.innerText = "Al pc è stato appioppato : " + rdmNumb;
 wrapper.append(pcInput);
 
-outSum.innerText = "La somma di questi 2 numeri è : " + sum;
+outSum.innerText = "La somma dei due numeri è : " + sum;
 wrapper.append(outSum);
 
 outParity.innerText = "Quindi " + totalResult;
 wrapper.append(outParity);
+
+
 
 
 
