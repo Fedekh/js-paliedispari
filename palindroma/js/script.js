@@ -38,7 +38,7 @@ let i = 0 ;
 
 while (i < userWord.length){
     
-  if (userUl === userWord) {
+  if (userReverseWord === userWord) {
     console.log("la parola che hai inserito è palindroma");
   } else {
     console.log("la parola che hai inserito non è palindroma");    
