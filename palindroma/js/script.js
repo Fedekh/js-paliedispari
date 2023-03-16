@@ -28,10 +28,19 @@ function palindroma (wordToCheck) {
   return userReverseWord === wordToCheck.toLowerCase();
 }
 
+let output = document.createElement("h3");
+output.classList.add("margin");
+const wrapper = document.querySelector(".wrapper");
+wrapper.append(output);
+let result;
 
-if (palindroma(userWord)) {
-
+if (palindroma(userWord)) {  
   console.log(`La parola ${userWord} è palindroma.`);
+  result = `La parola ${userWord} è palindroma.`;
 } else {
   console.log(`La parola ${userWord} NON è palindroma.`);
+  result = `La parola ${userWord} NON è palindroma.`;
+
 }
+
+output.innerHTML = result;

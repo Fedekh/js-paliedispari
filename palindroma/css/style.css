@@ -1,3 +1,10 @@
 body{
     background-color: rgb(41, 41, 41);
 }
+
+.margin {
+    width: 70%;
+    color: white;
+    margin: 200px auto;   
+
+}
