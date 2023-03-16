@@ -29,6 +29,8 @@ function palindroma (wordToCheck) {
 }
 
 
+// Manipolazione dom lieve
+
 let output = document.createElement("h3");
 output.classList.add("margin");
 const wrapper = document.querySelector(".wrapper");
@@ -43,5 +45,6 @@ if (palindroma(userWord)) {
   result = `La parola ${userWord} NON è palindroma.`;
 
 }
+
 
 output.innerHTML = result;
