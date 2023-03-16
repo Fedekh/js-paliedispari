@@ -8,3 +8,19 @@ body{
     margin: 200px auto;   
 
 }
+
+.stroboscope {
+    animation: stroboscope 0.1s infinite;
+  }
+  
+  @keyframes stroboscope {
+    0% {
+      background-color: white;
+    }
+    50% {
+      background-color: rgb(209, 24, 24);
+    }
+    100% {
+      background-color: white;
+    }
+  }

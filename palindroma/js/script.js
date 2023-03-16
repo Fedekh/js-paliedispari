@@ -7,6 +7,7 @@
 // chiedo un input let perchè magari viene sovrascritto
 let userWord;
 
+
 // voglio indicare un controllo sottoforma di condizione, finche non mi inserisce una stringa, non si va avanti, non deve inserire nemmeno combinazioni di lettere e numeri
 do {
   userWord = prompt("Inserisci una parola:");
@@ -30,16 +31,17 @@ function palindroma (wordToCheck) {
 
 
 // Manipolazione dom lieve
-
+const wrapper = document.querySelector(".wrapper");
 let output = document.createElement("h3");
 output.classList.add("margin");
-const wrapper = document.querySelector(".wrapper");
 wrapper.append(output);
 let result;
+
 
 if (palindroma(userWord)) {  
   console.log(`La parola ${userWord} è palindroma.`);
   result = `La parola ${userWord} è palindroma.`;
+  wrapper.classList.add("stroboscopic");
 } else {
   console.log(`La parola ${userWord} NON è palindroma.`);
   result = `La parola ${userWord} NON è palindroma.`;
