@@ -22,33 +22,29 @@ do {
   }
 } while (!isNaN(userWord));
 
-console.table('Hai inserito la stringa:', userWord ,typeof userWord);
+console.table('Hai inserito la parola:', userWord ,typeof userWord);
 
-// Trasformo ora la stringa alfabetica di partenza in un array
+// Trasformo ora la stringa alfabetica di partenza in un array con split()
 userWordArray = userWord.split ('');
 console.table('Ora la stringe viene trasformata in un array cosi composto:' , userWordArray);
 
-let userWordArray2 = userWordArray
-// creo un altro array del tutto speculare a quello di partenza 
-let userWordArrayReverse = userWordArray2.reverse();
-console.table('ora il suo reverse è :' , userWordArrayReverse);
+// faccio il reverse conscio che mi sovrascrive l'array
+userWordArray.reverse();
+console.table(userWordArray.reverse());
+
+
 
 // ritrasformo l'array in stringa
-let userReverseWord = userWordArrayReverse.join();
-
-let i = 0 ;
-
-while (i < userWord.length-1){
+let userReverseWord = (userWordArray.reverse()).join('');
+console.table(userReverseWord, userWord, typeof userReverseWord, typeof userWord);
     
+  // inserisco un po di logica per vedere se funziona tutto
   if (userReverseWord === userWord) {
-    console.log("la parola che hai inserito è palindroma");
+    console.log("la parola che hai inserito è palindroma" , typeof userReverseWord, typeof userWord);
   } else {
-    console.log("la parola che hai inserito non è palindroma");    
+    console.log("la parola che hai inserito non è palindroma" , typeof userReverseWord, typeof userWord);    
   }
 
-  i++;
-  
-}
 
 
 // /**
