@@ -31,7 +31,7 @@ console.log("il numero casuale appioppato al pc è:", rdmNumb);
 let sum = userNumber + rdmNumb;
 console.log("la somma tra i 2 numeri è:", sum);
 
-
+//richiamo funzione per vedere se la somma è pari o meno
 let totalResult = disparity (sum);
 console.log(totalResult);
 
