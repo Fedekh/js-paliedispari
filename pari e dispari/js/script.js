@@ -19,20 +19,47 @@ do {
         console.log(userNumber);
     } 
 } while ((userNumber < 1) || (userNumber > 5) || (isNaN(userNumber)));
-console.log ("il tuo numero è:", userNumber, typeof userNumber);
+console.log ("il tuo numero è:", userNumber);
 
 
-// sto testando senza funzioni , la funzione di default di js
-let rdmNumb = Math.floor((Math.random() * 5) + 1);
-console.log("il numero casuale appioppato al pc è:", rdmNumb, typeof rdmNumb);
+
+// richiamo funzione randomic
+let rdmNumb = randomic ();
+console.log("il numero casuale appioppato al pc è:", rdmNumb);
 
 // somma dei 2 numeri
 let sum = userNumber + rdmNumb;
-console.log("la somma tra i 2 numeri è:", sum, typeof sum);
+console.log("la somma tra i 2 numeri è:", sum);
 
-// condizione di pari e dispari e stampa
-if (sum % 2 === 0 ) {
-    console.log("la somma dei 2 numeri è pari", sum);
-}else {
-    console.log("la somma dei 2 numeri è dispari", sum);
-}
+
+let totalResult = disparity (sum);
+console.log(totalResult);
+
+// FUNZIONE PER IL RANDOM NUMBER PC
+/**
+ * randomic: appioppa un numero random tra 1 e 5 al pc
+ * * @returns {number} Return numero randomico per il pc
+ */
+function randomic () {
+    return Math.floor((Math.random() * 5) + 1); //non ci sono valori in ingresso, ma solo un return
+  }
+
+
+
+// FUNZIONE PER IL CONTROLLO PARITA' o DISPARITa' NELLA SOMMA DEI 2 NUMERI
+  /**
+ * disparity Controlla se la somma dei 2 numeri è pari o meno
+ * @param {number} numToCheck * //inserito un numero, vediamo se il resto della divisione per 2 è uguale a 0 o meno
+ * @returns {boolean} Return true se SUM è pari
+ */
+function disparity (numToCheck) {
+    let result ;
+    if (numToCheck % 2 === 0 ) {
+        result = "la somma dei 2 numeri è pari ed è uguale a:" + numToCheck;
+    }else {
+        result = "la somma dei 2 numeri è dispari ed è uguale a:" + numToCheck;
+    }
+    return result;
+  }
+
+ 
