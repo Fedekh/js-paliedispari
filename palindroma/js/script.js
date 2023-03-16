@@ -26,31 +26,27 @@ console.table('Hai inserito la stringa:', userWord ,typeof userWord);
 
 // Trasformo ora la stringa alfabetica di partenza in un array
 userWordArray = userWord.split ('');
-console.log('Ora la stringe viene trasformata in un array cosi composto:' , userWordArray);
+console.table('Ora la stringe viene trasformata in un array cosi composto:' , userWordArray);
 
-// let userWordArrayReverse = userWordArray.reverse;
+// creo un altro array del tutto speculare a quello di partenza 
 let userWordArrayReverse = userWordArray.reverse();
-console.log('ora il suo reverse è :' , userWordArrayReverse);
+console.table('ora il suo reverse è :' , userWordArrayReverse);
+
+let userReverseWord = userWordArrayReverse.join();
 
 let i = 0 ;
 
 while (i < userWord.length){
-  
-  if (userWordArrayReverse[i] === userWordArray[i]) {
+    
+  if (userUl === userWord) {
     console.log("la parola che hai inserito è palindroma");
   } else {
-    console.log("la parola che hai inserito non è palindroma");
-    
+    console.log("la parola che hai inserito non è palindroma");    
   }
 
   i++;
   
 }
-
-
-
-
-
 
 
 // /**
